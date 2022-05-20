@@ -1,6 +1,6 @@
 # Meter Safe Multisig
 
-The most trusted platform to store digital assets on Meter
+The most trusted platform to store digital assets on Meter Network.
 
 ## Getting Started
 
@@ -59,7 +59,7 @@ yarn build-mainnet
 1. Run `transaction-history-service`
 
 ```
-git clone https://github.com/harmony-one/multisig-react.git
+git clone https://github.com/sekmet/meter-multisig.git
 cd safe-transaction-service
 git checkout develop
 docker-compose build
@@ -73,7 +73,7 @@ Check that the service is running at https://localhost:8000
 2. Migrate Safe Contracts:
 
 ```
-git clone https://github.com/harmony-one/multisig-contracts.git
+git clone https://github.com/sekmet/multisig-contracts.git
 cd safe-contracts
 yarn
 npx truffle migrate
