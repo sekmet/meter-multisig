@@ -218,6 +218,7 @@
     "semver": "^7.3.2",
     "source-map-explorer": "^2.5.2",
     "styled-components": "^5.2.1",
+    "usb-detection": "^4.14.1",
     "web3": "1.2.11",
     "web3-core": "1.2.11",
     "web3-eth-contract": "1.2.11",
