@@ -1,5 +1,5 @@
 import { SyntheticEvent } from 'react'
-import {getDefaultTokenUri} from 'src/config/tokenList'
+import { getDefaultTokenUri } from 'src/config/tokenList'
 
 import TokenPlaceholder from 'src/routes/safe/components/Balances/assets/token_placeholder.svg'
 

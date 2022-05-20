@@ -44,7 +44,6 @@ async function fetchTransactions(
 
     // hack as endpoint is too slow now
     if (txType === 'incoming') {
-
       // return Promise.resolve({ eTag, results: [] })
     }
 

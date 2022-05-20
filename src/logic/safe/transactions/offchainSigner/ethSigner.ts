@@ -16,26 +16,26 @@ export const ethSigner = async ({ safeTxHash, sender }: EthSignerArgs): Promise<
   return new Promise(function (resolve, reject) {
     const provider = web3.currentProvider as AbstractProvider
     provider.sendAsync(
-        {
-          jsonrpc: '2.0',
-          method: 'eth_sign',
-          params: [sender, safeTxHash],
-          id: new Date().getTime(),
-        },
-        async function (err, signature) {
-          if (err) {
-            return reject(err)
-          }
+      {
+        jsonrpc: '2.0',
+        method: 'eth_sign',
+        params: [sender, safeTxHash],
+        id: new Date().getTime(),
+      },
+      async function (err, signature) {
+        if (err) {
+          return reject(err)
+        }
 
-          if (signature?.result == null) {
-            reject(new Error(ETH_SIGN_NOT_SUPPORTED_ERROR_MSG))
-            return
-          }
+        if (signature?.result == null) {
+          reject(new Error(ETH_SIGN_NOT_SUPPORTED_ERROR_MSG))
+          return
+        }
 
-          const sig = adjustV('eth_sign', signature.result, safeTxHash, sender)
+        const sig = adjustV('eth_sign', signature.result, safeTxHash, sender)
 
-          resolve(sig.replace(EMPTY_DATA, ''))
-        },
+        resolve(sig.replace(EMPTY_DATA, ''))
+      },
     )
   })
 }

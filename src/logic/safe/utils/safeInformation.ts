@@ -36,5 +36,3 @@ export const getSafeInfo = (safeAddress: string, retries = 1): Promise<void | Sa
       )
     })
 }
-
-

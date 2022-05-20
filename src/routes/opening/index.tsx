@@ -173,15 +173,19 @@ const SafeDeployment = ({ creationTxHash, onCancel, onRetry, onSuccess, submitte
         console.log('transactionHash ===>', txHash)
         txHashSent = txHash
       })
-      .once('receipt', function(receipt){ console.log(receipt) })
-      .on('confirmation', function(confNumber, receipt){ console.log(confNumber, receipt) })
+      .once('receipt', function (receipt) {
+        console.log(receipt)
+      })
+      .on('confirmation', function (confNumber, receipt) {
+        console.log(confNumber, receipt)
+      })
       .on('error', onError)
-      .then(function(receipt){
-          // will be fired once the receipt is mined
-          console.log('receipt ===>', receipt)
-          setSafeCreationTxHash(txHashSent)
-          setStepIndex(1)
-          setIntervalStarted(true)
+      .then(function (receipt) {
+        // will be fired once the receipt is mined
+        console.log('receipt ===>', receipt)
+        setSafeCreationTxHash(txHashSent)
+        setStepIndex(1)
+        setIntervalStarted(true)
       })
   }, [submittedPromise])
 
@@ -261,7 +265,6 @@ const SafeDeployment = ({ creationTxHash, onCancel, onRetry, onSuccess, submitte
         const web3 = getWeb3()
 
         const receipt = await web3.eth.getTransactionReceipt(safeCreationTxHash)
-
 
         let safeAddress
 

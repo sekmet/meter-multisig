@@ -25,7 +25,6 @@ interface TokenInfoProps {
 }
 
 const TokenInfo = ({ amount, title, token }: TokenInfoProps): ReactElement => {
-
   return (
     <DataDisplay title={title}>
       <StyledImageName>

@@ -25,7 +25,7 @@ export const WALLET_PROVIDER = {
   LEDGER: 'LEDGER',
   TREZOR: 'TREZOR',
   LATTICE: 'LATTICE',
-  ONEWALLET: '1WALLET'
+  ONEWALLET: '1WALLET',
 }
 
 // With some wallets from web3connect you have to use their provider instance only for signing
@@ -34,14 +34,17 @@ const httpProviderOptions = {
   timeout: 10_000,
 }
 // add meterify
-const meterify = require("@sekmet/meterify").meterify;
-const RPC_URL = 'https://testnet.meter.io';
+const meterify = require('@sekmet/meterify').meterify
+const RPC_URL = 'https://testnet.meter.io'
 
-export const web3ReadOnly = meterify(new Web3(
-  process.env.NODE_ENV !== 'test'
-    ? new Web3.providers.HttpProvider(getRpcServiceUrl(), httpProviderOptions)
-    : 'ws://localhost:8545',
-), RPC_URL)
+export const web3ReadOnly = meterify(
+  new Web3(
+    process.env.NODE_ENV !== 'test'
+      ? new Web3.providers.HttpProvider(getRpcServiceUrl(), httpProviderOptions)
+      : 'ws://localhost:8545',
+  ),
+  RPC_URL,
+)
 
 let web3 = web3ReadOnly
 export const getWeb3 = (): Web3 => web3
