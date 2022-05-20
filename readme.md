@@ -1,4 +1,4 @@
-# Meter Safe Multisig
+# Meter Safe Multisig [warringstakes]
 
 The most trusted platform to store digital assets on Meter Network.
 
