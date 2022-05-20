@@ -59,8 +59,8 @@ yarn build-mainnet
 1. Run `transaction-history-service`
 
 ```
-git clone https://github.com/sekmet/meter-multisig.git
-cd safe-transaction-service
+git clone https://github.com/sekmet/multisig-transaction-service.git
+cd multisig-transaction-service
 git checkout develop
 docker-compose build
 # it comes enabled by default in docker-compose
