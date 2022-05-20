@@ -3370,10 +3370,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@sekmet/meterify@^1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@sekmet/meterify/-/meterify-1.4.11.tgz#8fe0908de4d2ab89523b5c7f1fdc63e83a433b79"
-  integrity sha512-xhuNZn33+UV5tiVzDPXGzFRdZTaKyhTbkoXi9TeSLwCoc+xmSC8eLYF/NQfnBRAmE4L1iDHxhVJqRJvmbXDz8w==
+"@sekmet/meterify@^1.4.14":
+  version "1.4.14"
+  resolved "https://registry.yarnpkg.com/@sekmet/meterify/-/meterify-1.4.14.tgz#fa630679cccace865db1e19a3864d8b07e8ea9c9"
+  integrity sha512-TcLj+zXnFzFXapEj0fESpDfj1lyCkF8QK4/0ZEcBOzfLizxjfdvy+0I9vseo/ghugPY9WD4XIJdkDps9d5fxew==
   dependencies:
     "@meterio/devkit" "^1.6.5"
     debug "^3.1.0"
